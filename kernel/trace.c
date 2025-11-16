@@ -84,6 +84,7 @@ uint32_t trace_snapshot(struct trace_rec *out, uint32_t max)
         n = max;
     for (uint32_t i = 0; i < n; i++)
         out[i] = ring[(widx - n + i) & (TRACE_SLOTS - 1)];
+
     irq_restore(f);
     return n;
 }
