@@ -56,6 +56,7 @@ CASES = [
     ("boot", "boot", PASS, [r"Kestrel OS booting", r"\[cpu\] GDT\+TSS loaded", r"\[mm\] paging enabled",
                             r"interrupts on; boot complete", r"SCENARIO boot: PASS"], None),
     ("ktest", "ktest", PASS, [r"\[ktest\] running \d+ self-tests", r"KTEST page_fault_demand_paging\s+PASS",
+
                               r"KTEST spsc_irq_to_thread\s+PASS", r"KTEST mpsc_multi_producer\s+PASS",
                               r"summary: \d+ passed, 0 failed", r"SCENARIO ktest: PASS"], check_ktest),
     ("timer", "timer", PASS, [r"\[timer\] tick", r"SCENARIO timer: PASS"], check_timer),
