@@ -64,6 +64,7 @@ void gdt_init(void)
     df_tss.cs = KERNEL_CS;
     df_tss.ds = df_tss.es = df_tss.ss = df_tss.fs = df_tss.gs = KERNEL_DS;
     df_tss.eflags = 0x2;
+
     df_tss.iomap = sizeof(struct tss);
     gdt_set(6, (uint32_t)&df_tss, sizeof df_tss - 1, 0x89, 0x00);
     struct dtr d = {sizeof gdt - 1, (uint32_t)gdt};
