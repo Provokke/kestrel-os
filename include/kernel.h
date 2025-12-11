@@ -173,6 +173,7 @@ void wq_wake_all(struct waitqueue *wq);
     } while (0)
 
 /* ---- syscalls / user ---- */
+
 enum { SYS_EXIT = 0, SYS_WRITE = 1, SYS_GETPID = 2, SYS_YIELD = 3, SYS_SLEEP = 4, SYS_UPTIME = 5, NR_SYSCALLS };
 void syscall_dispatch(struct regs *r);
 int access_ok_user(uint32_t uaddr, uint32_t len, bool write);
