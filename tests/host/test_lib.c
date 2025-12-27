@@ -440,7 +440,6 @@ static void test_kbpf_verifier(void)
         big[i] = KBPF_I(KBPF_RETI, 0, 0, 0, 0);
     CHECK(kbpf_verify(big, KBPF_MAX_INSNS + 1, 4) == KBPF_ERR_LEN);
 }
-
 static void test_kbpf_run(void)
 {
     /* accept if (ctx[0] == 3 && (ctx[1] >> 4) & 1) else ctx[2] + 5 */
