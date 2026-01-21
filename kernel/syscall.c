@@ -80,6 +80,7 @@ void syscall_dispatch(struct regs *r)
 }
 
 extern const char user_bin_start[], user_bin_end[];
+
 static uint32_t user_frames[(USER_END - USER_BASE) / PAGE_SIZE];
 
 static void user_thread(void *arg)
