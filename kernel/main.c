@@ -187,6 +187,7 @@ void kmain(uint32_t magic, struct multiboot_info *mbi)
         finish("timer", scenario_timer());
     if (!strcmp(test, "sched"))
         finish("sched", scenario_sched());
+
     if (!strcmp(test, "pf"))
         finish("pf", scenario_pf());
     if (!strcmp(test, "user"))
