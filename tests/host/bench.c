@@ -61,6 +61,7 @@ int main(void)
         live[k] = kheap_alloc(&h, 16 + (i % 7) * 24);
     }
     double ts = now() - t;
+
     for (int k = 0; k < 1024; k++) { kheap_free(&h, live[k]); live[k] = NULL; }
     t = now();
     for (uint32_t i = 0; i < N; i++) {
