@@ -8,6 +8,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
+
 struct spsc_ring {
     uint32_t mask;
     uint32_t elem_size;
