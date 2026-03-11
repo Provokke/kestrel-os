@@ -142,6 +142,5 @@ def main():
     print(f"qemu boot tests: {passed} passed, {failed} failed")
     return 1 if failed else 0
 
-
 if __name__ == "__main__":
     sys.exit(main())
