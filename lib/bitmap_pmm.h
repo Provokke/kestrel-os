@@ -3,6 +3,7 @@
 #define KESTREL_BITMAP_PMM_H
 #include <stdbool.h>
 #include <stddef.h>
+
 #include <stdint.h>
 
 #define PMM_PAGE_SIZE 4096u
