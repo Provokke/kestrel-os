@@ -26,6 +26,7 @@ struct mpsc_node *mpsc_pop(struct mpsc_queue *q)
         tail = next;
         next = __atomic_load_n(&next->next, __ATOMIC_ACQUIRE);
     }
+
     if (next) {
         q->tail = next;
         return tail;
