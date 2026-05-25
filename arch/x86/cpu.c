@@ -90,6 +90,7 @@ static void df_task_entry(void)
     if (df_expected) {
         kprintf("SCENARIO df: PASS\n");
         qemu_exit(QEMU_EXIT_PASS);
+
     }
     panic("unexpected double fault");
 }
