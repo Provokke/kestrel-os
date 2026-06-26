@@ -19,6 +19,7 @@ struct pmm {
 
 /* All frames start "used"; release usable ranges with pmm_mark_free. */
 
+
 void pmm_init(struct pmm *p, uint32_t *bitmap, size_t nframes, uintptr_t base);
 void pmm_mark_free(struct pmm *p, uintptr_t addr, size_t len);
 void pmm_mark_used(struct pmm *p, uintptr_t addr, size_t len);
